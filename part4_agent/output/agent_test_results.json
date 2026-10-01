@@ -1,0 +1,295 @@
+{
+  "summary": {
+    "total": 26,
+    "passed": 26,
+    "failed": 0
+  },
+  "results": [
+    {
+      "id": "monthly_ethnic_may",
+      "question": "What was the revenue for Ethnic Wear in May?",
+      "expected_intent": "MONTHLY_CATEGORY_REVENUE",
+      "detected_intent": "MONTHLY_CATEGORY_REVENUE",
+      "validation_status": "ok",
+      "source": "part1_sql/output/monthly_category_revenue.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "Ethnic Wear revenue in May was INR 185107.61 from 104 orders."
+    },
+    {
+      "id": "monthly_kids_april",
+      "question": "What was Kids Wear revenue in April?",
+      "expected_intent": "MONTHLY_CATEGORY_REVENUE",
+      "detected_intent": "MONTHLY_CATEGORY_REVENUE",
+      "validation_status": "ok",
+      "source": "part1_sql/output/monthly_category_revenue.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "Kids Wear revenue in April was INR 59847.27 from 55 orders."
+    },
+    {
+      "id": "monthly_all_june",
+      "question": "What was the revenue in June?",
+      "expected_intent": "MONTHLY_CATEGORY_REVENUE",
+      "detected_intent": "MONTHLY_CATEGORY_REVENUE",
+      "validation_status": "ok",
+      "source": "part1_sql/output/monthly_category_revenue.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "Ethnic Wear revenue in June was INR 76371.53 from 52 orders.\nWestern Wear revenue in June was INR 97415.64 from 66 orders.\nKids Wear revenue in June was INR 56737.78 from 57 orders.\nHome & Kitchen revenue in June was INR 129971.22 from 73 orders.\nBeauty & Personal Care revenue in June was INR 37559.07 from 52 orders."
+    },
+    {
+      "id": "monthly_invalid_category",
+      "question": "What was the revenue for Electronics in May?",
+      "expected_intent": "MONTHLY_CATEGORY_REVENUE",
+      "detected_intent": "MONTHLY_CATEGORY_REVENUE",
+      "validation_status": "validation_error",
+      "source": "part1_sql/output/monthly_category_revenue.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "Category 'Electronics' is not in the verified data. Available categories: Ethnic Wear, Western Wear, Kids Wear, Home & Kitchen, Beauty & Personal Care."
+    },
+    {
+      "id": "monthly_invalid_month",
+      "question": "What was the revenue for Ethnic Wear in January?",
+      "expected_intent": "MONTHLY_CATEGORY_REVENUE",
+      "detected_intent": "MONTHLY_CATEGORY_REVENUE",
+      "validation_status": "validation_error",
+      "source": "part1_sql/output/monthly_category_revenue.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "Month 'January' is not in the verified data. Available months: April, May, June."
+    },
+    {
+      "id": "region_highest",
+      "question": "Which region had the highest revenue?",
+      "expected_intent": "REGION_REVENUE",
+      "detected_intent": "REGION_REVENUE",
+      "validation_status": "ok",
+      "source": "part1_sql/output/region_revenue.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "North had the highest total revenue: INR 337125.46 from 231 orders."
+    },
+    {
+      "id": "region_lowest",
+      "question": "Which region had the lowest revenue?",
+      "expected_intent": "REGION_REVENUE",
+      "detected_intent": "REGION_REVENUE",
+      "validation_status": "ok",
+      "source": "part1_sql/output/region_revenue.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "East had the lowest total revenue: INR 275098.45 from 221 orders."
+    },
+    {
+      "id": "region_named",
+      "question": "What was the total revenue for the South region?",
+      "expected_intent": "REGION_REVENUE",
+      "detected_intent": "REGION_REVENUE",
+      "validation_status": "ok",
+      "source": "part1_sql/output/region_revenue.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "South total revenue was INR 316736.68 from 216 orders."
+    },
+    {
+      "id": "region_all",
+      "question": "Show revenue by region.",
+      "expected_intent": "REGION_REVENUE",
+      "detected_intent": "REGION_REVENUE",
+      "validation_status": "ok",
+      "source": "part1_sql/output/region_revenue.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "North: INR 337125.46 (231 orders)\nWest: INR 333106.33 (232 orders)\nSouth: INR 316736.68 (216 orders)\nEast: INR 275098.45 (221 orders)"
+    },
+    {
+      "id": "region_invalid",
+      "question": "What was the revenue in the Central region?",
+      "expected_intent": "REGION_REVENUE",
+      "detected_intent": "REGION_REVENUE",
+      "validation_status": "validation_error",
+      "source": "part1_sql/output/region_revenue.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "Region 'Central' is not in the verified data. Available regions: North, West, South, East."
+    },
+    {
+      "id": "top5",
+      "question": "Who are the top 5 resellers?",
+      "expected_intent": "TOP_RESELLERS",
+      "detected_intent": "TOP_RESELLERS",
+      "validation_status": "ok",
+      "source": "part1_sql/output/top5_resellers.csv",
+      "passed": true,
+      "verification": "all 7 checks passed",
+      "answer": "Top resellers by total spend, highest first (shown by alias and region only):\nALIAS-19 (West): INR 75295.09\nALIAS-22 (West): INR 73882.33\nALIAS-12 (South): INR 69936.46\nALIAS-06 (North): INR 64238.97\nALIAS-05 (North): INR 61825.02"
+    },
+    {
+      "id": "top3",
+      "question": "Show me the top 3 resellers by spend.",
+      "expected_intent": "TOP_RESELLERS",
+      "detected_intent": "TOP_RESELLERS",
+      "validation_status": "ok",
+      "source": "part1_sql/output/top5_resellers.csv",
+      "passed": true,
+      "verification": "all 9 checks passed",
+      "answer": "Top resellers by total spend, highest first (shown by alias and region only):\nALIAS-19 (West): INR 75295.09\nALIAS-22 (West): INR 73882.33\nALIAS-12 (South): INR 69936.46"
+    },
+    {
+      "id": "top_unknown_reseller",
+      "question": "Is RS030 one of the top resellers?",
+      "expected_intent": "TOP_RESELLERS",
+      "detected_intent": "TOP_RESELLERS",
+      "validation_status": "validation_error",
+      "source": "part1_sql/output/top5_resellers.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "Reseller 'RS030' does not exist in the verified data."
+    },
+    {
+      "id": "zero_never",
+      "question": "Which reseller never placed an order?",
+      "expected_intent": "ZERO_ORDER_RESELLERS",
+      "detected_intent": "ZERO_ORDER_RESELLERS",
+      "validation_status": "ok",
+      "source": "part1_sql/output/zero_order_resellers.csv",
+      "passed": true,
+      "verification": "all 7 checks passed",
+      "answer": "ALIAS-24 (West) has never placed an order."
+    },
+    {
+      "id": "zero_no_orders",
+      "question": "Which reseller had no orders?",
+      "expected_intent": "ZERO_ORDER_RESELLERS",
+      "detected_intent": "ZERO_ORDER_RESELLERS",
+      "validation_status": "ok",
+      "source": "part1_sql/output/zero_order_resellers.csv",
+      "passed": true,
+      "verification": "all 7 checks passed",
+      "answer": "ALIAS-24 (West) has never placed an order."
+    },
+    {
+      "id": "aov_june",
+      "question": "What is the June delivered average order value?",
+      "expected_intent": "JUNE_DELIVERED_AOV",
+      "detected_intent": "JUNE_DELIVERED_AOV",
+      "validation_status": "ok",
+      "source": "part1_sql/output/june_delivered_aov.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "June average order value for Delivered orders was INR 1267.69."
+    },
+    {
+      "id": "aov_wrong_month",
+      "question": "What was the average order value in May?",
+      "expected_intent": "JUNE_DELIVERED_AOV",
+      "detected_intent": "JUNE_DELIVERED_AOV",
+      "validation_status": "validation_error",
+      "source": "part1_sql/output/june_delivered_aov.csv",
+      "passed": true,
+      "verification": "all 5 checks passed",
+      "answer": "Only the June Delivered AOV is available in the verified outputs (asked about: May)."
+    },
+    {
+      "id": "mom_ethnic_apr_may",
+      "question": "How did Ethnic Wear change from April to May?",
+      "expected_intent": "MOM_GROWTH",
+      "detected_intent": "MOM_GROWTH",
+      "validation_status": "ok",
+      "source": "part2_engine/output/mom_growth_results.csv (narrative drafted by part3_narrative.narrative_generator.generate_narrative)",
+      "passed": true,
+      "verification": "all 8 checks passed",
+      "answer": "April -> May: Ethnic Wear revenue increased from INR 104520.77 to INR 185107.61, a month-on-month change of 77.1%. Result: flagged - the change is beyond the 8% threshold and needs attention."
+    },
+    {
+      "id": "mom_ethnic_may_jun",
+      "question": "How did Ethnic Wear change from May to June?",
+      "expected_intent": "MOM_GROWTH",
+      "detected_intent": "MOM_GROWTH",
+      "validation_status": "ok",
+      "source": "part2_engine/output/mom_growth_results.csv (narrative drafted by part3_narrative.narrative_generator.generate_narrative)",
+      "passed": true,
+      "verification": "all 8 checks passed",
+      "answer": "May -> June: Ethnic Wear revenue decreased from INR 185107.61 to INR 76371.53, a month-on-month change of -58.74%. Result: flagged - the change is beyond the 8% threshold and needs attention."
+    },
+    {
+      "id": "mom_beauty_not_flagged",
+      "question": "How did Beauty & Personal Care change from May to June?",
+      "expected_intent": "MOM_GROWTH",
+      "detected_intent": "MOM_GROWTH",
+      "validation_status": "ok",
+      "source": "part2_engine/output/mom_growth_results.csv (narrative drafted by part3_narrative.narrative_generator.generate_narrative)",
+      "passed": true,
+      "verification": "all 8 checks passed",
+      "answer": "May -> June: Beauty & Personal Care revenue increased from INR 35542.11 to INR 37559.07, a month-on-month change of 5.67%. Result: not_flagged - the change is within the 8% threshold; no action needed."
+    },
+    {
+      "id": "mom_why",
+      "question": "Why did Ethnic Wear revenue drop in June?",
+      "expected_intent": "MOM_GROWTH",
+      "detected_intent": "MOM_GROWTH",
+      "validation_status": "ok",
+      "source": "part2_engine/output/mom_growth_results.csv (narrative drafted by part3_narrative.narrative_generator.generate_narrative)",
+      "passed": true,
+      "verification": "all 11 checks passed",
+      "answer": "FACT: May -> June: Ethnic Wear revenue decreased from INR 185107.61 to INR 76371.53, a month-on-month change of -58.74%. Result: flagged - the change is beyond the 8% threshold and needs attention.\nHYPOTHESIS: The supplied data does not record causes (such as promotions, pricing, demand, seasonality or competition), so none is stated as fact. One possibility to test is that the change is concentrated in a few resellers; this is not confirmed by the supplied data.\nACTION: Break the orders for this category and month pair down by reseller (data/orders.csv joined to data/resellers.csv) to test that hypothesis before acting."
+    },
+    {
+      "id": "mom_non_adjacent",
+      "question": "How did Ethnic Wear change from April to June?",
+      "expected_intent": "MOM_GROWTH",
+      "detected_intent": "MOM_GROWTH",
+      "validation_status": "validation_error",
+      "source": "part2_engine/output/mom_growth_results.csv",
+      "passed": true,
+      "verification": "all 5 checks passed",
+      "answer": "No verified month-over-month comparison for April -> June. Available comparisons: April -> May, May -> June."
+    },
+    {
+      "id": "mom_invalid_category",
+      "question": "How did Electronics change from April to May?",
+      "expected_intent": "MOM_GROWTH",
+      "detected_intent": "MOM_GROWTH",
+      "validation_status": "validation_error",
+      "source": "part2_engine/output/mom_growth_results.csv",
+      "passed": true,
+      "verification": "all 6 checks passed",
+      "answer": "Category 'Electronics' is not in the verified data. Available categories: Ethnic Wear, Western Wear, Kids Wear, Home & Kitchen, Beauty & Personal Care."
+    },
+    {
+      "id": "unsupported_forecast",
+      "question": "Tell me tomorrow's sales.",
+      "expected_intent": "unsupported",
+      "detected_intent": "unsupported",
+      "validation_status": "unsupported",
+      "source": null,
+      "passed": true,
+      "verification": "all 5 checks passed",
+      "answer": "Unsupported or ambiguous question. Please ask about revenue, regional revenue, top resellers, zero-order resellers, June delivered AOV, or month-over-month category growth."
+    },
+    {
+      "id": "unsupported_offtopic",
+      "question": "What is the weather today?",
+      "expected_intent": "unsupported",
+      "detected_intent": "unsupported",
+      "validation_status": "unsupported",
+      "source": null,
+      "passed": true,
+      "verification": "all 5 checks passed",
+      "answer": "Unsupported or ambiguous question. Please ask about revenue, regional revenue, top resellers, zero-order resellers, June delivered AOV, or month-over-month category growth."
+    },
+    {
+      "id": "unsupported_vague",
+      "question": "Tell me something interesting.",
+      "expected_intent": "unsupported",
+      "detected_intent": "unsupported",
+      "validation_status": "unsupported",
+      "source": null,
+      "passed": true,
+      "verification": "all 5 checks passed",
+      "answer": "Unsupported or ambiguous question. Please ask about revenue, regional revenue, top resellers, zero-order resellers, June delivered AOV, or month-over-month category growth."
+    }
+  ]
+}
